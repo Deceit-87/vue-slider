@@ -19,32 +19,56 @@ const app = new Vue({
             
             
                 },
-                // {
-                //     imgUrl: 'img/03.jpg' , 
-                //     titleImg:'Gran-bretagna',
-                //     descriptionImg:'Lorem ipsum.',
+                {
+                    imgUrl: 'img/03.jpg' , 
+                    titleImg:'Gran-bretagna',
+                    descriptionImg:'Lorem ipsum.',
             
             
-                // },
-                // {
-                //     imgUrl: 'img/04.jpg' , 
-                //     titleImg:'Germania',
-                //     descriptionImg:'Lorem ipsum,cumque provident totam omnis.',
+                },
+                {
+                    imgUrl: 'img/04.jpg' , 
+                    titleImg:'Germania',
+                    descriptionImg:'Lorem ipsum,cumque provident totam omnis.',
             
             
-                // },
-                // {
-                //     imgUrl: 'img/05.jpg' , 
-                //     titleImg:'Pardise',
-                //     descriptionImg:'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+                },
+                {
+                    imgUrl: 'img/05.jpg' , 
+                    titleImg:'Pardise',
+                    descriptionImg:'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
             
             
-                // }
+                }
             ]
             
-        }
+        },
+        methods: 
+        {
+                    upSlide: function(){
+                        if(this.currentIndex == 0){
+                            this.currentIndex = this.SLIDES.length - 1;
 
-})
+                            console.log(this.SLIDES.length)
+                        }
+                        else  {
+                            this.currentIndex--
+                        }
+                    },
+                    downSlide: function(){
+                       if(this.currentIndex == this.SLIDES.length - 1){
+                            this.currentIndex = 0 ;           
+                       }
+                       else {
+                           this.currentIndex++
+                       }
+                    }
+                
+        },
+           
+        })
+
+
 
 
 

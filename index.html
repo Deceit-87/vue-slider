@@ -15,7 +15,9 @@
          <section>
              <div class="slider">
                  <div class="slide-wrapper">
-                     <div v-for="(element,index) in SLIDES" class="item" :class=" index === currentIndex ? 'active' : '' ">
+                     <div v-for="(element,index) in SLIDES" 
+                     class="item" 
+                     :class=" index === currentIndex ? 'active' : '' ">
                          <img :src="element.imgUrl" alt="">
                          <div class="text">
                             <h3>{{element.titleImg}}</h3>
@@ -37,8 +39,12 @@
                     </div> -->
                  </div>
                      <div class="thumb-wrapper">
-                         <div v-for="(element,index) in SLIDES" class="item-sm" :class=" index === currentIndex ? 'thumb-active' : '' ">
-                             <img :src="element.imgUrl" alt="">
+                         <div 
+                            v-for="(element,index) in SLIDES"
+                            @click="pickOnClick(index)"
+                            class="item-sm"  
+                            :class=" index === currentIndex ? 'thumb-active' : '' ">
+                             <img  :src="element.imgUrl" alt="">
                          </div>
                          
                          <!-- <div class="item-sm">
@@ -54,11 +60,12 @@
                             <img src="./img/05.jpg" alt="">
                         </div>
                       -->
-                        <div class="arrows">
-                            <span class="up" @click="upSlide"><i class="fa-solid fa-caret-up"></i></span>
-                            <span class="down" @click="downSlide"><i class="fa-solid fa-caret-down"></i></span>
-                        </div>
+                        
+                      <div class="arrows up" @click="upSlide"><i class="fa-solid fa-caret-up"></i></div>
+                      <div class="arrows down" @click="downSlide"><i class="fa-solid fa-caret-down"></i></div>
                     </div>
+                    
+                   
              </div>
          </section>
     </div>

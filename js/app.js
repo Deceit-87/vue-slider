@@ -62,7 +62,12 @@ const app = new Vue({
                        else {
                            this.currentIndex++
                        }
-                    }
+                    },
+
+                    pickOnClick: function(index) {
+                        this.currentIndex = index ;
+                        console.log(this.currentIndex)
+                    },
                 
         },
            

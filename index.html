@@ -37,7 +37,7 @@
                     </div> -->
                  </div>
                      <div class="thumb-wrapper">
-                         <div v-for="(element,index) in SLIDES" class="item-sm">
+                         <div v-for="(element,index) in SLIDES" class="item-sm" :class=" index === currentIndex ? 'thumb-active' : '' ">
                              <img :src="element.imgUrl" alt="">
                          </div>
                          

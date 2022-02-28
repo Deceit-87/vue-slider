@@ -55,11 +55,13 @@ width: 100%;}
 .thumb-wrapper .item-sm img {
     width: fit-content;
     height: 6vh; 
-    
+    opacity: 0.7;
     object-fit: cover;
     object-position: center;
 }
-
+.thumb-wrapper .item-sm.thumb-active img{
+    opacity: 1;
+}
 .arrows {
     width: 100%;
     position: absolute;

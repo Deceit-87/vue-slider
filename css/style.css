@@ -15,6 +15,8 @@ img{
 }
 
 .slider {
+    overflow: hidden;
+    border-radius: 10px;
     display: flex;
     height: 30vh;
     width: 70vh;
@@ -69,4 +71,16 @@ width: 100%;}
     top: 0;
     left: 0;
     
+}
+
+.arrows span{
+    margin: 2px;
+   padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    aspect-ratio: 1;
+    background-color: rgba(7, 6, 6, 0.493);
+    color: bisque;
 }
